@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { Header } from './Components/Header';
 import { AddContact } from './Components/Add_Contact';
-import { ContactCard } from './Components/Contact_Card';
-import { uuid } from 'uuidv4';
+import { ContactList } from './Components/Contact_List';
+import { v4 as uuid } from 'uuid';
 
 function App() {
   const local_storage_key = "contacts";
@@ -27,11 +27,15 @@ function App() {
     setContacts(newList);
   }
 
+  React.useEffect(() => {
+    localStorage.setItem(local_storage_key, JSON.stringify(contacts));
+  }, [contacts])
+
   return (
     <div >
       <Header/>
-      <AddContact/>
-      <ContactCard/>
+      <AddContact addContactHandler = {addContactHandler}/>
+      <ContactList contacts = {contacts} removeContactHandler = {removeContactHandler} />
     </div>  
   );
 }
