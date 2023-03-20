@@ -1,14 +1,24 @@
 import React from "react";
+import user from '../Images/user.png';
+
 
 export const ContactCard = (props) => {
-    const { id, name, email } = {};
-    return (
-        <div className="item">
-            <div className="content">
-                <div className="header">{name ? name : 'no value'}</div>
-                <div>{email ? email : 'no value'}</div>
-            </div>
-            <i className="trash alternate outline icon" style={{ color: "red", marginTop: "7px" }}></i>
+    console.log(props);
+    return <div className="item">
+        <img className="ui avatar image" src = {user} alt = 'user'/> 
+        <div className="item" >
+            <div className="header"> {'name'}</div>
+            <div>{'email'}</div>
         </div>
-    );
+        <i className="trach alternate outline icon"  
+            style = {{
+                color: "red",
+                marginTop: "7px",
+            }}
+            onClick = {() => {
+
+            }}
+        />
+    </div>
 }
+

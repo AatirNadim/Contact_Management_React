@@ -3,6 +3,8 @@ import React from "react";
 export const AddContact = () => {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
+
+    
     const handleSubmit = (e) => {}
     return <div className = "ui main">
         <h2>Add Contact</h2>
