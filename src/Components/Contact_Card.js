@@ -16,7 +16,7 @@ export const ContactCard = (props) => {
                 marginTop: "7px",
             }}
             onClick = {() => {
-
+                
             }}
         />
     </div>
