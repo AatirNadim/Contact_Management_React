@@ -6,7 +6,13 @@ export const ContactCard = (props) => {
     console.log(props);
 
     const { id, email, name } = props.contact;
-    return <div className="item">
+    return <div className="item"
+    style = {{
+        display : 'flex',
+        justifyContent : 'space-around'
+    }}
+    
+    >
         <img className="ui avatar image" src = {user} alt = 'user'/> 
         <div className="item" >
             <div className="header"> {name}</div>

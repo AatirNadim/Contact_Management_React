@@ -29,6 +29,7 @@ function App() {
 
   React.useEffect(() => {
     localStorage.setItem(local_storage_key, JSON.stringify(contacts));
+    console.log('added/updated the contacts in the localStorage -->\n', contacts);
   }, [contacts])
 
   return (

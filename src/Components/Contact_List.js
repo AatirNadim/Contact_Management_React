@@ -8,6 +8,8 @@ export const ContactList = (props) => {
     }
 
     return <div className="ui celled list" >
+        <h2 className="ui center"
+        >Contact List</h2>
         {
             props.contacts.map((contact) => {
                 return <ContactCard  
